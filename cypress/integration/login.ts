@@ -20,3 +20,17 @@ it('Test Sauce Demo Sauce labs product backpack', () => {
     loginPage.assertLogin()
     dashboardPage.sauceLabsBackpack() 
 })
+
+//Tambahan 2 Tescase dr  Uswatun Khasanah
+
+it('Negative case checkout tanpa isi firstname,lastname and postal code', () => {
+    loginPage.login(URL,'standard_user','secret_sauce')
+    loginPage.assertLogin()
+    dashboardPage.checkoutgagal()
+})
+
+it('Positive case berhasil checkout', () => {
+    loginPage.login(URL,'standard_user','secret_sauce')
+    loginPage.assertLogin()
+    dashboardPage.checkoutberhasil()
+})
